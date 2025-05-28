@@ -11,6 +11,6 @@ Test ve geliştirme süreçlerinde kullanılmak üzere isim, soyisim, şehir, il
 ## Kurulum
 
 - Projeyi derlerdikten sonra oluşan .jar uzantılı dosyayı ve lib klasöründe yer alan json kütüphanesini projenize import edin.
-- Random data üretmek istediğiniz sınıfa "import com.randomix.Randomix" olarak import edin.
+- Kullanmak istediğiniz sınıfa "import com.randomix.Randomix" olarak import edin.
 - "Randomix.ad", "Randomix.soyad", "Randomix.sehir", "Randomix.ilce(sehir)" şeklinde çağırarak kullanabilirsiniz.
 
