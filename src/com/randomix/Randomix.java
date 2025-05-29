@@ -6,8 +6,8 @@ package com.randomix;
  */
 public class Randomix {
 
-    public static String ad() {
-        return AdUret.generate();
+    public static AdUret ad() {
+        return new AdUret();
     }
 
     public static String soyad() {
@@ -36,6 +36,42 @@ public class Randomix {
 
     public static String mail(String ad, String soyad) {
         return MailUret.generate(ad, soyad);
+    }
+
+    public static String mail() {
+        return MailUret.generate();
+    }
+
+    public static TelefonNoUret telefon() {
+        return new TelefonNoUret();
+    }
+
+    public static String kullaniciAdi() {
+        return KullaniciAdiUret.generate();
+    }
+
+    public static String kullaniciAdi(String ad, String soyad) {
+        return KullaniciAdiUret.generate(ad, soyad);
+    }
+
+    public static String dogumTarihi() {
+        return TarihUret.dogumTarihi();
+    }
+
+    public static String dogumTarihi(int min, int max) {
+        return TarihUret.dogumTarihi(min, max);
+    }
+
+    public static String bugunTarih() {
+        return TarihUret.bugunTarih();
+    }
+
+    public static String bugunSaat() {
+        return TarihUret.bugunSaat();
+    }
+
+    public static String bugunTarihSaat() {
+        return TarihUret.bugunTarihSaat();
     }
 
 }

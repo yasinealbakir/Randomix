@@ -31,7 +31,7 @@ public class MailUret {
      * Havuzdan rastgele ad ve soyad seçerek e-posta üretir.
      */
     public static String generate() {
-        String ad = VeriSetleri.ADLAR.get(RANDOM.nextInt(VeriSetleri.ADLAR.size()));
+        String ad = VeriSetleri.ADLAR_ERKEK.get(RANDOM.nextInt(VeriSetleri.ADLAR_ERKEK.size()));
         String soyad = VeriSetleri.SOYADLAR.get(RANDOM.nextInt(VeriSetleri.SOYADLAR.size()));
         return generate(ad, soyad);
     }

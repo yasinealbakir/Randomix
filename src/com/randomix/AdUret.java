@@ -1,8 +1,6 @@
 package com.randomix;
 
-
 import java.util.Random;
-
 
 /**
  *
@@ -10,10 +8,18 @@ import java.util.Random;
  */
 public class AdUret {
 
-    private static final Random random = new Random();
+    private static final Random RANDOM = new Random();
 
-    public static String generate() {
-        return VeriSetleri.ADLAR.get(random.nextInt(VeriSetleri.ADLAR.size()));
+    public String erkek() {
+        return VeriSetleri.ADLAR_ERKEK.get(RANDOM.nextInt(VeriSetleri.ADLAR_ERKEK.size()));
+    }
+
+    public String kadin() {
+        return VeriSetleri.ADLAR_KADIN.get(RANDOM.nextInt(VeriSetleri.ADLAR_KADIN.size()));
+    }
+
+    public String rastgele() {
+        return RANDOM.nextBoolean() ? erkek() : kadin();
     }
 
 }
