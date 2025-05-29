@@ -19,6 +19,7 @@ public class VeriSetleri {
     public static final List<String> SEHIRLER = new ArrayList<>();
     public static final Map<String, List<String>> ILCELER = new HashMap<>();
     public static final Map<String, String> ALAN_KODLARI = new HashMap<>();
+    public static final List<String> SIRKETLER = new ArrayList<>();
 
     static {
         try {
@@ -88,6 +89,19 @@ public class VeriSetleri {
             }
         } catch (IOException | RuntimeException e) {
             System.err.println("Hata: " + e.getMessage());
+        }
+
+        try {
+            InputStream is = VeriSetleri.class.getClassLoader().getResourceAsStream("sirketAdi.json");
+            if (is == null) {
+                throw new RuntimeException("sirketAdi.json bulunamadý!");
+            }
+            String jsonTxt = new String(is.readAllBytes(), StandardCharsets.UTF_8);
+            JSONArray arr = new JSONArray(jsonTxt);
+            for (int i = 0; i < arr.length(); i++) {
+                SIRKETLER.add(arr.getString(i));
+            }
+        } catch (IOException | RuntimeException e) {
         }
     }
 }

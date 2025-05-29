@@ -74,4 +74,12 @@ public class Randomix {
         return TarihUret.bugunTarihSaat();
     }
 
+    public static int sayi(int min, int max) {
+        return SayiUret.generate(min, max);
+    }
+
+    public static String sirketAdi() {
+        return SirketAdiUret.generate();
+    }
+
 }

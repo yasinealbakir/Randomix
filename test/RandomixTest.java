@@ -28,6 +28,8 @@ public class RandomixTest {
         String bugunTarih = Randomix.bugunTarih();
         String bugunSaat = Randomix.bugunSaat();
         String BugunTarihSaat = Randomix.bugunTarihSaat();
+        int sayi = Randomix.sayi(0, 10);
+        String sirketAdi = Randomix.sirketAdi();
 
         System.out.println("TCKN: " + tckn);
         System.out.println("Erkek Adý: " + adErkek);
@@ -49,6 +51,8 @@ public class RandomixTest {
         System.out.println("Bugünün Tarihi: " + bugunTarih);
         System.out.println("Bugünün Saati: " + bugunSaat);
         System.out.println("Bugünün Tarih ve Saati: " + BugunTarihSaat);
+        System.out.println("Üretilen Sayý: " + sayi);
+        System.out.println("Þirket Adý: " + sirketAdi);
 
     }
 
