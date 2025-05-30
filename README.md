@@ -2,11 +2,8 @@
 
 Randomix, Java tabanlı, rastgele veri üretimi sağlayan bir kütüphanedir. 
 Test ve geliştirme süreçlerinde kullanılmak üzere isim, soyisim, şehir, ilçe vb. gibi sahte veriler üretir.
+JSON tabanlı veri setleriyle esnek yapı
 
-## Özellikler
-
-- Rastgele isim, soyisim, şehir ve ilçe, tckn, vgn, e-posta, telefon no, kullanıcı adı, tarih üretme
-- JSON tabanlı veri setleriyle esnek yapı
 
 ## Random Oluşturulabilen Veriler
 - TCKN
