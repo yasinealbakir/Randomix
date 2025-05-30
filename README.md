@@ -8,6 +8,27 @@ Test ve geliÅŸtirme sÃ¼reÃ§lerinde kullanÄ±lmak Ã¼zere isim, soyisim, ÅŸehir, il
 - Rastgele isim, soyisim, ÅŸehir ve ilÃ§e, tckn, vgn, e-posta, telefon no, kullanÄ±cÄ± adÄ±, tarih Ã¼retme
 - JSON tabanlÄ± veri setleriyle esnek yapÄ±
 
+## Random Oluşturulabilen Veriler
+- TCKN
+- VGN
+- Ad (Erkek, Kadın, Baba Adı, Anne Adı, Rastgele, Tam Ad)
+- Soyad
+- İl
+- İlçe
+- Parola
+- Kullanıcı Adı
+- E-Posta
+- Telefon (Cep ve Ev Telefonu)
+- Tarih (Doğum Tarihi, Günün Tarihi, Günün Saati)
+- Şirket Adı
+- Kan Grubu
+- Cinsiyet
+- Medeni Hal
+- Ülke
+- Uyruk
+- Din
+- Adres
+
 ## Kurulum
 
 - Projeyi derlerdikten sonra oluÅŸan .jar uzantÄ±lÄ± dosyayÄ± ve lib klasÃ¶rÃ¼nde yer alan json kÃ¼tÃ¼phanesini projenize import edin.
