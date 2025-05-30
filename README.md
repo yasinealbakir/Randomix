@@ -8,10 +8,10 @@ Test ve geliştirme süreçlerinde kullanılmak üzere isim, soyisim, şehir, il
 - Rastgele isim, soyisim, şehir ve ilçe, tckn, vgn, e-posta, telefon no, kullanıcı adı, tarih üretme
 - JSON tabanlı veri setleriyle esnek yapı
 
-## Random Olu turulabilen Veriler
+## Random Oluşturulabilen Veriler
 - TCKN
 - VGN
-- Ad (Erkek, Kad n, Baba Ad , Anne Ad , Rastgele, Tam Ad)
+- Ad (Erkek, Kadın, Baba Adı , Anne Adı , Rastgele, Tam Ad)
 - Soyad
 - İl
 - İlçe
