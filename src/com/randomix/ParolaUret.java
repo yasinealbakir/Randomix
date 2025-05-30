@@ -11,7 +11,7 @@ public class ParolaUret {
     private static final String BUYUK_HARFLER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     private static final String KUCUK_HARFLER = "abcdefghijklmnopqrstuvwxyz";
     private static final String RAKAMLAR = "0123456789";
-    private static final String OZEL_KARAKTERLER = "!@#$%^&*()-_=+<>?";
+    private static final String OZEL_KARAKTERLER = "!?.";
 
     private static final String KARAKTER_SETI
             = BUYUK_HARFLER + KUCUK_HARFLER + RAKAMLAR + OZEL_KARAKTERLER;

@@ -9,9 +9,9 @@ public class RandomixTest {
 
     public static void main(String[] args) {
         String adErkek = Randomix.ad().erkek();
+        String soyad = Randomix.soyad();
         String adKadin = Randomix.ad().kadin();
         String adRastgele = Randomix.ad().rastgele();
-        String soyad = Randomix.soyad();
         String tamAd = Randomix.ad().tamAd();
         String babaAdi = Randomix.ad().babaAdi();
         String anneAdi = Randomix.ad().anneAdi();
@@ -19,7 +19,7 @@ public class RandomixTest {
         String ilce = Randomix.ilce(sehir);
         String tckn = Randomix.tckn();
         String vgn = Randomix.vgn();
-        String parola = Randomix.parola(10);
+        String parola = Randomix.parola(6);
         String mail = Randomix.mail(adErkek, soyad);
         String mail2 = Randomix.mail();
         String cep = Randomix.telefon().cep();
@@ -38,14 +38,16 @@ public class RandomixTest {
         String cinsiyet = Randomix.cinsiyet();
         String medeniHal = Randomix.medeniHal();
         String din = Randomix.din();
+        String ulke = Randomix.ulke();
+        String uyruk = Randomix.uyruk();
 
         System.out.println("TCKN: " + tckn);
         System.out.println("Erkek Adý: " + adErkek);
+        System.out.println("Soyad: " + soyad);
         System.out.println("Kadýn Adý: " + adKadin);
         System.out.println("Rastgele Ad: " + adRastgele);
         System.out.println("Baba Adý: " + babaAdi);
         System.out.println("Anne Adý: " + anneAdi);
-        System.out.println("Soyad: " + soyad);
         System.out.println("Tam Ad: " + tamAd);
         System.out.println("Ýl: " + sehir);
         System.out.println("Ýlçe: " + ilce);
@@ -69,6 +71,8 @@ public class RandomixTest {
         System.out.println("Cinsiyet: " + cinsiyet);
         System.out.println("Medeni Hal: " + medeniHal);
         System.out.println("Din: " + din);
+        System.out.println("Ülke: " + ulke);
+        System.out.println("Uyruk: " + uyruk);
 
     }
 

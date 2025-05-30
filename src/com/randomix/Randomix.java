@@ -102,4 +102,12 @@ public class Randomix {
         return DinUret.generate();
     }
 
+    public static String ulke() {
+        return UlkeUret.generate();
+    }
+
+    public static String uyruk() {
+        return UyrukUret.generate();
+    }
+
 }
