@@ -12,6 +12,9 @@ public class RandomixTest {
         String adKadin = Randomix.ad().kadin();
         String adRastgele = Randomix.ad().rastgele();
         String soyad = Randomix.soyad();
+        String tamAd = Randomix.ad().tamAd();
+        String babaAdi = Randomix.ad().babaAdi();
+        String anneAdi = Randomix.ad().anneAdi();
         String sehir = Randomix.sehir();
         String ilce = Randomix.ilce(sehir);
         String tckn = Randomix.tckn();
@@ -30,12 +33,20 @@ public class RandomixTest {
         String BugunTarihSaat = Randomix.bugunTarihSaat();
         int sayi = Randomix.sayi(0, 10);
         String sirketAdi = Randomix.sirketAdi();
+        String kanGrubu = Randomix.kanGrubu();
+        String adres = Randomix.adres();
+        String cinsiyet = Randomix.cinsiyet();
+        String medeniHal = Randomix.medeniHal();
+        String din = Randomix.din();
 
         System.out.println("TCKN: " + tckn);
         System.out.println("Erkek Adý: " + adErkek);
         System.out.println("Kadýn Adý: " + adKadin);
         System.out.println("Rastgele Ad: " + adRastgele);
+        System.out.println("Baba Adý: " + babaAdi);
+        System.out.println("Anne Adý: " + anneAdi);
         System.out.println("Soyad: " + soyad);
+        System.out.println("Tam Ad: " + tamAd);
         System.out.println("Ýl: " + sehir);
         System.out.println("Ýlçe: " + ilce);
         System.out.println("VGN: " + vgn);
@@ -53,6 +64,11 @@ public class RandomixTest {
         System.out.println("Bugünün Tarih ve Saati: " + BugunTarihSaat);
         System.out.println("Üretilen Sayý: " + sayi);
         System.out.println("Þirket Adý: " + sirketAdi);
+        System.out.println("Kan Grubu: " + kanGrubu);
+        System.out.println("Adres: " + adres);
+        System.out.println("Cinsiyet: " + cinsiyet);
+        System.out.println("Medeni Hal: " + medeniHal);
+        System.out.println("Din: " + din);
 
     }
 

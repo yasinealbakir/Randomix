@@ -1,5 +1,6 @@
 package com.randomix;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
@@ -17,6 +18,14 @@ public class MailUret {
 
     private static final Random RANDOM = new Random();
 
+    private static final List<String> tumAdlar;
+
+    static {
+        tumAdlar = new ArrayList<>();
+        tumAdlar.addAll(VeriSetleri.ADLAR_ERKEK);
+        tumAdlar.addAll(VeriSetleri.ADLAR_KADIN);
+    }
+
     /**
      * Dýþarýdan ad ve soyad alýr, ad.soyad@domain þeklinde e-posta üretir.
      */
@@ -31,7 +40,7 @@ public class MailUret {
      * Havuzdan rastgele ad ve soyad seçerek e-posta üretir.
      */
     public static String generate() {
-        String ad = VeriSetleri.ADLAR_ERKEK.get(RANDOM.nextInt(VeriSetleri.ADLAR_ERKEK.size()));
+        String ad = tumAdlar.get(RANDOM.nextInt(tumAdlar.size()));
         String soyad = VeriSetleri.SOYADLAR.get(RANDOM.nextInt(VeriSetleri.SOYADLAR.size()));
         return generate(ad, soyad);
     }

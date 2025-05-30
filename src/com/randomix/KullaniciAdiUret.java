@@ -1,5 +1,6 @@
 package com.randomix;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
@@ -12,6 +13,14 @@ import java.util.Random;
 public class KullaniciAdiUret {
 
     private static final Random RANDOM = new Random();
+
+    private static final List<String> tumAdlar;
+
+    static {
+        tumAdlar = new ArrayList<>();
+        tumAdlar.addAll(VeriSetleri.ADLAR_ERKEK);
+        tumAdlar.addAll(VeriSetleri.ADLAR_KADIN);
+    }
 
     // Kullanýlabilecek kullanýcý adý formatlarý
     private static final List<String> FORMATLAR = Arrays.asList(
@@ -68,7 +77,7 @@ public class KullaniciAdiUret {
      * üretir.
      */
     public static String generate() {
-        String ad = VeriSetleri.ADLAR_ERKEK.get(RANDOM.nextInt(VeriSetleri.ADLAR_ERKEK.size()));
+        String ad = tumAdlar.get(RANDOM.nextInt(tumAdlar.size()));
         String soyad = VeriSetleri.SOYADLAR.get(RANDOM.nextInt(VeriSetleri.SOYADLAR.size()));
         return generate(ad, soyad);
     }

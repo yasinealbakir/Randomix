@@ -82,4 +82,24 @@ public class Randomix {
         return SirketAdiUret.generate();
     }
 
+    public static String kanGrubu() {
+        return KanGrubuUret.generate();
+    }
+
+    public static String adres() {
+        return AdresUret.generate();
+    }
+
+    public static String cinsiyet() {
+        return CinsiyetUret.generate();
+    }
+
+    public static String medeniHal() {
+        return MedeniHalUret.generate();
+    }
+
+    public static String din() {
+        return DinUret.generate();
+    }
+
 }

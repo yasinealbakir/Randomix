@@ -14,12 +14,14 @@ public class VeriSetleri {
 
     public static final List<String> ADLAR_ERKEK = new ArrayList<>();
     public static final List<String> ADLAR_KADIN = new ArrayList<>();
-
+    public static final List<String> ADLAR_BABA_ADI = new ArrayList<>();
+    public static final List<String> ADLAR_ANNE_ADI = new ArrayList<>();
     public static final List<String> SOYADLAR = new ArrayList<>();
     public static final List<String> SEHIRLER = new ArrayList<>();
     public static final Map<String, List<String>> ILCELER = new HashMap<>();
     public static final Map<String, String> ALAN_KODLARI = new HashMap<>();
     public static final List<String> SIRKETLER = new ArrayList<>();
+    public static final List<String> ADRESLER = new ArrayList<>();
 
     static {
         try {
@@ -78,6 +80,32 @@ public class VeriSetleri {
         }
 
         try {
+            InputStream is = VeriSetleri.class.getClassLoader().getResourceAsStream("adErkek.json");
+            if (is == null) {
+                throw new RuntimeException("adErkek.json bulunamad?!");
+            }
+            String jsonTxt = new String(is.readAllBytes(), StandardCharsets.UTF_8);
+            JSONArray arr = new JSONArray(jsonTxt);
+            for (int i = 0; i < arr.length(); i++) {
+                ADLAR_BABA_ADI.add(arr.getString(i));
+            }
+        } catch (IOException | RuntimeException e) {
+        }
+
+        try {
+            InputStream is = VeriSetleri.class.getClassLoader().getResourceAsStream("adKadin.json");
+            if (is == null) {
+                throw new RuntimeException("adKadin.json bulunamad?!");
+            }
+            String jsonTxt = new String(is.readAllBytes(), StandardCharsets.UTF_8);
+            JSONArray arr = new JSONArray(jsonTxt);
+            for (int i = 0; i < arr.length(); i++) {
+                ADLAR_ANNE_ADI.add(arr.getString(i));
+            }
+        } catch (IOException | RuntimeException e) {
+        }
+
+        try {
             InputStream is = VeriSetleri.class.getClassLoader().getResourceAsStream("soyad.json");
             if (is == null) {
                 throw new RuntimeException("soyad.json bulunamadý!");
@@ -102,6 +130,20 @@ public class VeriSetleri {
                 SIRKETLER.add(arr.getString(i));
             }
         } catch (IOException | RuntimeException e) {
+        }
+
+        try {
+            InputStream is = VeriSetleri.class.getClassLoader().getResourceAsStream("adres.json");
+            if (is == null) {
+                throw new RuntimeException("adres.json bulunamadý!");
+            }
+            String jsonTxt = new String(is.readAllBytes(), StandardCharsets.UTF_8);
+            JSONArray arr = new JSONArray(jsonTxt);
+            for (int i = 0; i < arr.length(); i++) {
+                ADRESLER.add(arr.getString(i));
+            }
+        } catch (IOException | RuntimeException e) {
+            System.err.println("Hata: " + e.getMessage());
         }
     }
 }
