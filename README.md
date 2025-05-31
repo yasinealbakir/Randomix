@@ -25,6 +25,10 @@ JSON tabanlı veri setleriyle esnek yapı
 - Uyruk
 - Din
 - Adres
+- Ünvan
+- IP Adresi
+- Posta Kodu
+- GUID
 
 ## Kurulum
 
