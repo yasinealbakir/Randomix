@@ -29,6 +29,11 @@ JSON tabanlı veri setleriyle esnek yapı
 - IP Adresi
 - Posta Kodu
 - GUID
+- Doğum Yeri
+- Plaka
+- Pasaport No
+- Ehliyet No
+- Metin (Cümle, Paragraf, Kelime)
 
 ## Kurulum
 
