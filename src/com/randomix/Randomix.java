@@ -1,7 +1,6 @@
 package com.randomix;
 
 /**
- *
  * @author yasin.albakir
  */
 public class Randomix {
@@ -108,6 +107,22 @@ public class Randomix {
 
     public static String uyruk() {
         return UyrukUret.generate();
+    }
+
+    public static String ip() {
+        return IpUret.generate();
+    }
+
+    public static String postaKodu() {
+        return PostaKodUret.generate();
+    }
+
+    public static String guid() {
+        return GuidUret.generate();
+    }
+
+    public static String unvan() {
+        return UnvanUret.generate();
     }
 
 }

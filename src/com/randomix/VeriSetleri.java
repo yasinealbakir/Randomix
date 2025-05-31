@@ -24,12 +24,13 @@ public class VeriSetleri {
     public static final List<String> ADRESLER = new ArrayList<>();
     public static final List<String> ULKELER = new ArrayList<>();
     public static final List<String> UYRUKLAR = new ArrayList<>();
+    public static final List<String> UNVANLAR = new ArrayList<>();
 
     static {
         try {
             InputStream is = VeriSetleri.class.getClassLoader().getResourceAsStream("il-ilce.json");
             if (is == null) {
-                throw new RuntimeException("il-ilce.json bulunamadý!");
+                throw new RuntimeException("il-ilce.json bulunamadï¿½!");
             }
 
             String jsonTxt = new String(is.readAllBytes(), StandardCharsets.UTF_8);
@@ -110,7 +111,7 @@ public class VeriSetleri {
         try {
             InputStream is = VeriSetleri.class.getClassLoader().getResourceAsStream("soyad.json");
             if (is == null) {
-                throw new RuntimeException("soyad.json bulunamadý!");
+                throw new RuntimeException("soyad.json bulunamadï¿½!");
             }
             String jsonTxt = new String(is.readAllBytes(), StandardCharsets.UTF_8);
             JSONArray arr = new JSONArray(jsonTxt);
@@ -124,7 +125,7 @@ public class VeriSetleri {
         try {
             InputStream is = VeriSetleri.class.getClassLoader().getResourceAsStream("sirketAdi.json");
             if (is == null) {
-                throw new RuntimeException("sirketAdi.json bulunamadý!");
+                throw new RuntimeException("sirketAdi.json bulunamadï¿½!");
             }
             String jsonTxt = new String(is.readAllBytes(), StandardCharsets.UTF_8);
             JSONArray arr = new JSONArray(jsonTxt);
@@ -137,7 +138,7 @@ public class VeriSetleri {
         try {
             InputStream is = VeriSetleri.class.getClassLoader().getResourceAsStream("adres.json");
             if (is == null) {
-                throw new RuntimeException("adres.json bulunamadý!");
+                throw new RuntimeException("adres.json bulunamadï¿½!");
             }
             String jsonTxt = new String(is.readAllBytes(), StandardCharsets.UTF_8);
             JSONArray arr = new JSONArray(jsonTxt);
@@ -151,7 +152,7 @@ public class VeriSetleri {
         try {
             InputStream is = VeriSetleri.class.getClassLoader().getResourceAsStream("ulkeler.json");
             if (is == null) {
-                throw new RuntimeException("ulkeler.json bulunamadý!");
+                throw new RuntimeException("ulkeler.json bulunamadï¿½!");
             }
             String jsonTxt = new String(is.readAllBytes(), StandardCharsets.UTF_8);
             JSONArray arr = new JSONArray(jsonTxt);
@@ -165,12 +166,26 @@ public class VeriSetleri {
         try {
             InputStream is = VeriSetleri.class.getClassLoader().getResourceAsStream("uyruk.json");
             if (is == null) {
-                throw new RuntimeException("uyruk.json bulunamadý!");
+                throw new RuntimeException("uyruk.json bulunamadï¿½!");
             }
             String jsonTxt = new String(is.readAllBytes(), StandardCharsets.UTF_8);
             JSONArray arr = new JSONArray(jsonTxt);
             for (int i = 0; i < arr.length(); i++) {
                 UYRUKLAR.add(arr.getString(i));
+            }
+        } catch (IOException | RuntimeException e) {
+            System.err.println("Hata: " + e.getMessage());
+        }
+
+        try {
+            InputStream is = VeriSetleri.class.getClassLoader().getResourceAsStream("unvan.json");
+            if (is == null) {
+                throw new RuntimeException("unvan.json bulunamadï¿½!");
+            }
+            String jsonTxt = new String(is.readAllBytes(), StandardCharsets.UTF_8);
+            JSONArray arr = new JSONArray(jsonTxt);
+            for (int i = 0; i < arr.length(); i++) {
+                UNVANLAR.add(arr.getString(i));
             }
         } catch (IOException | RuntimeException e) {
             System.err.println("Hata: " + e.getMessage());
