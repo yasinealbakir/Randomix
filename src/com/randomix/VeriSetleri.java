@@ -25,6 +25,7 @@ public class VeriSetleri {
     public static final List<String> ULKELER = new ArrayList<>();
     public static final List<String> UYRUKLAR = new ArrayList<>();
     public static final List<String> UNVANLAR = new ArrayList<>();
+    public static final List<String> KELIMELER = new ArrayList<>();
 
     static {
         try {
@@ -186,6 +187,20 @@ public class VeriSetleri {
             JSONArray arr = new JSONArray(jsonTxt);
             for (int i = 0; i < arr.length(); i++) {
                 UNVANLAR.add(arr.getString(i));
+            }
+        } catch (IOException | RuntimeException e) {
+            System.err.println("Hata: " + e.getMessage());
+        }
+
+        try {
+            InputStream is = VeriSetleri.class.getClassLoader().getResourceAsStream("kelimeler.json");
+            if (is == null) {
+                throw new RuntimeException("kelimeler.json bulunamad�!");
+            }
+            String jsonTxt = new String(is.readAllBytes(), StandardCharsets.UTF_8);
+            JSONArray arr = new JSONArray(jsonTxt);
+            for (int i = 0; i < arr.length(); i++) {
+                KELIMELER.add(arr.getString(i));
             }
         } catch (IOException | RuntimeException e) {
             System.err.println("Hata: " + e.getMessage());

@@ -43,6 +43,11 @@ public class RandomixTest {
         String postaKodu = Randomix.postaKodu();
         String guid = Randomix.guid();
         String unvan = Randomix.unvan();
+        String dogumYeri = Randomix.dogumYeri();
+        String pasaportNo = Randomix.pasaportNo();
+        String ehliyetNo = Randomix.ehliyetNo();
+        String plaka = Randomix.plaka();
+        String metin = Randomix.metin().cumle(2);
 
         System.out.println("TCKN: " + tckn);
         System.out.println("Erkek Adı: " + adErkek);
@@ -80,6 +85,11 @@ public class RandomixTest {
         System.out.println("Posta Kodu: " + postaKodu);
         System.out.println("GUID: " + guid);
         System.out.println("Ünvan: " + unvan);
+        System.out.println("Doğum Yeri: " + dogumYeri);
+        System.out.println("Pasaport No: " + pasaportNo);
+        System.out.println("Ehliyet No: " + ehliyetNo);
+        System.out.println("Plaka: " + plaka);
+        System.out.println("Cümle: " + metin);
 
     }
 

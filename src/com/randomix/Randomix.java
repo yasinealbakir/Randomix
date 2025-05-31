@@ -125,4 +125,24 @@ public class Randomix {
         return UnvanUret.generate();
     }
 
+    public static String dogumYeri() {
+        return DogumYeriUret.generate();
+    }
+
+    public static String pasaportNo() {
+        return PasaportNoUret.generate();
+    }
+
+    public static String ehliyetNo() {
+        return EhliyetNoUret.generate();
+    }
+
+    public static String plaka() {
+        return PlakaUret.generate();
+    }
+
+    public static MetinUret metin() {
+        return new MetinUret();
+    }
+
 }
